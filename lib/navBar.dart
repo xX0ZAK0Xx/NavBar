@@ -1,5 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
 
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class MyNavbar extends StatefulWidget {
@@ -14,6 +16,7 @@ class _MyNavbarState extends State<MyNavbar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       floatingActionButton: Container(
         height: 100,
         width: 100,
@@ -28,22 +31,22 @@ class _MyNavbarState extends State<MyNavbar> {
           Icons.shopping_cart,
           color: Colors.white,
           size: 60,
-        ), //icon inside button,
+        ),
       ),
 
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
       bottomNavigationBar: BottomAppBar(
-        color: Colors.white,
+        color: const Color.fromARGB(255, 255, 255, 255),
         shape: CircularNotchedRectangle(), 
-        notchMargin: 0,
+        notchMargin: -50,
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             IconButton(
               icon: Icon(
-                Icons.home,
+                Icons.home_rounded,
                 color: Colors.green,
                 size: 32,
               ),
@@ -58,7 +61,7 @@ class _MyNavbarState extends State<MyNavbar> {
               width: 40,
             ),
             IconButton(
-              icon: Icon(Icons.bookmark, color: Colors.grey, size: 32),
+              icon: Icon(Icons.bookmark_rounded, color: Colors.grey, size: 32),
               onPressed: () {},
             ),
             IconButton(
